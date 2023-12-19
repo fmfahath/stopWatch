@@ -8,11 +8,11 @@ function  stopWatch(){
 
     if(seconds == 60){
         seconds = 0;
-        minutes++
+        minutes++;
     }
     if(minutes == 60){
         minutes = 0;
-        hours++;
+        hours++; 
     }
 
     //display as two digit number
@@ -24,12 +24,23 @@ function  stopWatch(){
 }
 
 //stop watch start button function 
-function startWatch(){
+function startWatch(){  
     if(timer !== null){
         clearInterval(timer);
     }
-    setInterval(stopWatch, 1000);
+
+    timer = setInterval(stopWatch, 1000);
 }
+
+//stop timer 
+function stopTimer(){
+    clearInterval(timer);
+}
+
+
+
+
+
 
 
 
