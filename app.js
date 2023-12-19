@@ -37,6 +37,13 @@ function stopTimer(){
     clearInterval(timer);
 }
 
+//reset timer
+function resetTimer(){
+    clearInterval(timer);
+    [seconds, minutes, hours] = [0,0,0];
+    displayTimeEl.innerHTML = "00:00:00";
+}
+
 
 
 
