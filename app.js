@@ -15,7 +15,12 @@ function  stopWatch(){
         hours++;
     }
 
-    displayTimeEl.innerHTML = `${hours}:${minutes}:${seconds}`;
+    //display as two digit number
+    let sec = seconds < 10 ? "0" + seconds : seconds;
+    let min = minutes < 10 ? "0" + minutes : minutes;
+    let hrs = hours < 10 ? "0" + hours : hours;
+
+    displayTimeEl.innerHTML = `${hrs}:${min}:${sec}`;
 }
 
 //stop watch start button function 
